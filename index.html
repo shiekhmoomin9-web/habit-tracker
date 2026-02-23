@@ -1,123 +1,61 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ultimate Habit Tracker</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<title>Habit Tracker by Moomin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{
+font-family: Arial;
 margin:0;
-font-family: Arial, sans-serif;
-background: linear-gradient(135deg,#667eea,#764ba2);
+background: linear-gradient(135deg,#4CAF50,#2E7D32);
 color:white;
 text-align:center;
 }
 
 .container{
-max-width:480px;
-margin:30px auto;
-background:white;
-color:black;
-padding:30px;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,0.3);
-animation: fadeIn 1s ease-in-out;
+padding:40px 20px;
+animation: fadeIn 1.2s ease-in;
 }
 
 @keyframes fadeIn{
-from{opacity:0; transform:translateY(40px);}
-to{opacity:1; transform:translateY(0);}
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
 }
 
-.price{
-font-size:26px;
-font-weight:bold;
-color:#764ba2;
-margin:10px 0;
-}
-
-.timer{
-color:red;
-font-weight:bold;
-margin:10px 0;
-}
-
-.sold{
-color:green;
-font-weight:bold;
-margin:5px 0 15px 0;
-}
-
-.features{
-text-align:left;
-margin:20px 0;
-}
-
-.features li{
-margin:8px 0;
-}
-
-.preview img{
-width:100%;
-border-radius:10px;
-margin-top:10px;
-box-shadow:0 10px 20px rgba(0,0,0,0.2);
+h1{font-size:32px;margin-bottom:10px;}
+.price{font-size:28px;font-weight:bold;margin:15px 0;}
+button{
+background:white;
+color:#2E7D32;
+border:none;
+padding:15px 30px;
+font-size:18px;
+border-radius:8px;
+cursor:pointer;
+margin-top:20px;
 transition:0.3s;
 }
-
-.preview img:hover{
+button:hover{
 transform:scale(1.05);
 }
 
-button{
-width:100%;
-padding:14px;
-margin-top:12px;
-border:none;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
+.section{
+background:white;
+color:#333;
+margin:30px 15px;
+padding:25px;
+border-radius:12px;
 }
 
-.pay-btn{
-background:#ff4d6d;
-color:white;
-animation:pulse 1.5s infinite;
+.testimonial{
+margin:15px 0;
+font-style:italic;
 }
 
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(255,77,109,0.7);}
-70%{box-shadow:0 0 0 15px rgba(255,77,109,0);}
-100%{box-shadow:0 0 0 0 rgba(255,77,109,0);}
-}
-
-.pay-btn:hover{
-background:#e63950;
-}
-
-.whatsapp-btn{
-background:#25D366;
-color:white;
-}
-
-.whatsapp-btn:hover{
-background:#1ebe5d;
-}
-
-.review{
-background:#f4f4f4;
-padding:10px;
-border-radius:8px;
-margin-top:10px;
+.footer{
+margin:30px 0;
 font-size:14px;
-}
-
-.note{
-margin-top:15px;
-font-size:14px;
-color:green;
-font-weight:bold;
+opacity:0.8;
 }
 </style>
 </head>
@@ -125,67 +63,50 @@ font-weight:bold;
 <body>
 
 <div class="container">
-
-<h1>Ultimate Habit Tracker</h1>
-<p>Build discipline. Stay consistent. Transform your life.</p>
-
+<h1>🔥 30 Day Habit Tracker</h1>
+<p>Build Discipline. Stay Consistent. Change Your Life.</p>
 <div class="price">Only ₹49</div>
 
-<div class="timer">Offer ends in: <span id="countdown">10:00</span></div>
-<div class="sold">🔥 127 people purchased today</div>
-
-<ul class="features">
-<li>✔ Daily habit tracking system</li>
-<li>✔ Weekly & Monthly progress sheet</li>
-<li>✔ Printable clean PDF design</li>
-<li>✔ Boost productivity & focus</li>
-<li>✔ Perfect for students & self-growth</li>
-</ul>
-
-<h3>Preview</h3>
-<div class="preview">
-<img src="https://via.placeholder.com/400x250?text=Preview+1">
-<img src="https://via.placeholder.com/400x250?text=Preview+2">
+<button onclick="payNow()">Pay with Google Pay</button>
 </div>
 
-<a href="upi://pay?pa=moominmuneer804@okicici&pn=ShiekhMoomin&am=49&cu=INR">
-<button class="pay-btn">Pay ₹49 via Google Pay / UPI</button>
-</a>
-
-<a href="https://wa.me/919906778854?text=I%20have%20paid%20₹49%20for%20the%20Habit%20Tracker.%20Here%20is%20my%20payment%20screenshot." target="_blank">
-<button class="whatsapp-btn">Send Payment Screenshot</button>
-</a>
-
-<div class="review">⭐ “This tracker improved my consistency in 7 days!”</div>
-<div class="review">⭐ “Simple, clean and very effective.”</div>
-
-<div class="note">
-Instant delivery after payment confirmation.
+<div class="section">
+<h2>📋 What You Get</h2>
+<p>✔ 30 Day Habit Tracking Sheet</p>
+<p>✔ Daily Progress System</p>
+<p>✔ Printable & Mobile Friendly</p>
+<p>✔ Clean Minimal Design</p>
 </div>
 
+<div class="section">
+<h2>👀 Preview</h2>
+<img src="YOUR_IMAGE_LINK_HERE" width="100%" style="border-radius:10px;">
+</div>
+
+<div class="section">
+<h2>⭐ What Students Say</h2>
+<div class="testimonial">“This tracker made me consistent for 21 days straight!”</div>
+<div class="testimonial">“Best ₹49 investment for self improvement.”</div>
+</div>
+
+<div class="section">
+<h2>❓ FAQ</h2>
+<p><b>How will I get the file?</b><br>After payment, you’ll be redirected to download page.</p>
+<p><b>Is it printable?</b><br>Yes, you can print it or use digitally.</p>
+</div>
+
+<div class="footer">
+© 2026 Moomin | Secure Payment via UPI
 </div>
 
 <script>
-// Countdown Timer
-let time = 600;
-let countdown = document.getElementById("countdown");
-
-setInterval(function(){
-let minutes = Math.floor(time/60);
-let seconds = time % 60;
-countdown.innerHTML = minutes + ":" + (seconds<10?"0":"") + seconds;
-time--;
-if(time < 0){ time = 600; }
-},1000);
+function payNow(){
+window.location.href="upi://pay?pa=moominmuneer804@okicici&pn=Moomin&am=49&cu=INR";
+setTimeout(function(){
+window.location.href="https://drive.google.com/drive/folders/1SuOvcKTUMAp9P7JVOkwBpI394mzmNJvy?usp=drive_link";
+},5000);
+}
 </script>
 
 </body>
 </html>
-<script>
-const names = ["Aman from Delhi", "Sara from Mumbai", "Rahul from Bangalore", "Ali from Hyderabad"];
-
-setInterval(function(){
-let randomName = names[Math.floor(Math.random()*names.length)];
-alert("🔥 " + randomName + " just purchased the Habit Tracker!");
-},15000);
-</script>

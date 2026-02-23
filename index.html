@@ -31,10 +31,7 @@ from{opacity:0;transform:translateY(20px);}
 to{opacity:1;transform:translateY(0);}
 }
 
-h1{
-font-size:36px;
-margin-bottom:10px;
-}
+h1{font-size:36px;margin-bottom:10px;}
 
 .price{
 font-size:30px;
@@ -52,6 +49,7 @@ font-size:16px;
 cursor:pointer;
 transition:0.3s;
 box-shadow:0 0 15px rgba(255,255,255,0.5);
+margin:8px;
 }
 
 .btn:hover{
@@ -60,7 +58,7 @@ box-shadow:0 0 25px rgba(255,255,255,0.8);
 }
 
 .section{
-max-width:600px;
+max-width:650px;
 margin:40px auto;
 padding:20px;
 }
@@ -73,6 +71,12 @@ border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,0.2);
 margin-bottom:25px;
 animation: fadeIn 1.5s ease-in;
+}
+
+.preview-img{
+width:100%;
+border-radius:15px;
+margin-top:15px;
 }
 
 input{
@@ -107,7 +111,9 @@ opacity:0.9;
 <h1>🔥 30 Day Habit Tracker</h1>
 <p>Build Discipline. Stay Consistent. Transform Your Life.</p>
 <div class="price">Only ₹49</div>
+
 <button class="btn" onclick="payNow()">Pay with UPI</button>
+<button class="btn" onclick="shareWhatsApp()">Share on WhatsApp</button>
 </div>
 
 <div class="section">
@@ -116,34 +122,55 @@ opacity:0.9;
 <h2>📋 What You Get</h2>
 <p>✔ 30 Day Tracking Sheet</p>
 <p>✔ Printable & Digital Version</p>
-<p>✔ Minimal Clean Design</p>
-<p>✔ Boost Daily Consistency</p>
+<p>✔ Clean Minimal Design</p>
+<p>✔ Helps You Stay Consistent</p>
 </div>
 
 <div class="card">
-<h2>📸 Upload Payment Screenshot</h2>
-<p>After payment, upload screenshot below.</p>
+<h2>👀 Preview</h2>
+<p>See how clean and simple it looks:</p>
+<img src="PASTE_YOUR_IMAGE_LINK_HERE" class="preview-img">
+</div>
+
+<div class="card">
+<h2>📸 After Payment</h2>
+<p>1️⃣ Complete UPI Payment</p>
+<p>2️⃣ Take Screenshot</p>
+<p>3️⃣ Upload Below OR Send via WhatsApp</p>
 
 <form action="https://formsubmit.co/moominmuneer804@gmail.com" method="POST" enctype="multipart/form-data">
 <input type="email" name="email" placeholder="Enter your email" required>
 <input type="file" name="screenshot" required>
 <input type="hidden" name="_subject" value="New Habit Tracker Payment">
-<button class="upload-btn" type="submit">Submit & Get Access</button>
+<button class="upload-btn" type="submit">Submit Screenshot</button>
 </form>
+
+<br>
+<button class="btn" onclick="sendWhatsApp()">Send Screenshot on WhatsApp</button>
 
 </div>
 
 </div>
 
 <div class="footer">
-Secure UPI Payment | © 2026 Moomin
+Secure UPI Payment | Instant Manual Verification | © 2026 Moomin
 </div>
 
 <script>
 function payNow(){
 window.location.href="upi://pay?pa=moominmuneer804@okicici&pn=Moomin&am=49&cu=INR";
 }
+
+function shareWhatsApp(){
+var text="🔥 I found this amazing 30 Day Habit Tracker for just ₹49! Check it out:";
+window.open("https://wa.me/?text="+encodeURIComponent(text));
+}
+
+function sendWhatsApp(){
+var text="Hi, I have completed the payment for Habit Tracker. Sharing screenshot here.";
+window.open("https://wa.me/919906778854?text="+encodeURIComponent(text));
+}
 </script>
 
 </body>
-</html>v
+</html>

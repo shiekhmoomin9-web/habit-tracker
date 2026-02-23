@@ -8,99 +8,60 @@
 body{
 margin:0;
 font-family:'Segoe UI',sans-serif;
-background: linear-gradient(-45deg,#4CAF50,#2E7D32,#1e3c72,#2a5298);
-background-size:400% 400%;
-animation: gradientBG 10s ease infinite;
-color:white;
+background:#f4f6f9;
+color:#222;
 text-align:center;
 }
 
-@keyframes gradientBG{
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-}
-
 .hero{
-padding:70px 20px;
-animation: fadeIn 1.5s ease-in;
+background:#2E7D32;
+color:white;
+padding:60px 20px;
 }
 
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(20px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-h1{font-size:36px;margin-bottom:10px;}
+h1{font-size:32px;margin-bottom:10px;}
 
 .price{
-font-size:30px;
+font-size:26px;
 font-weight:bold;
-margin:20px 0;
+margin:15px 0;
 }
 
 .btn{
 background:white;
 color:#2E7D32;
-padding:15px 35px;
-border-radius:50px;
+padding:14px 30px;
+border-radius:30px;
 border:none;
 font-size:16px;
 cursor:pointer;
-transition:0.3s;
-box-shadow:0 0 15px rgba(255,255,255,0.5);
 margin:8px;
 }
 
-.btn:hover{
-transform:scale(1.07);
-box-shadow:0 0 25px rgba(255,255,255,0.8);
-}
-
 .section{
-max-width:650px;
+max-width:600px;
 margin:40px auto;
 padding:20px;
 }
 
 .card{
-background:rgba(255,255,255,0.15);
-backdrop-filter:blur(12px);
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.2);
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
 margin-bottom:25px;
-animation: fadeIn 1.5s ease-in;
 }
 
 .preview-img{
 width:100%;
-border-radius:15px;
+border-radius:12px;
 margin-top:15px;
-}
-
-input{
-width:100%;
-padding:12px;
-margin:12px 0;
-border-radius:10px;
-border:none;
-}
-
-.upload-btn{
-background:white;
-color:#2E7D32;
-padding:12px;
-border:none;
-border-radius:30px;
-cursor:pointer;
-font-weight:bold;
 }
 
 .footer{
 margin:40px;
 font-size:14px;
-opacity:0.9;
+color:#666;
 }
 </style>
 </head>
@@ -109,11 +70,12 @@ opacity:0.9;
 
 <div class="hero">
 <h1>🔥 30 Day Habit Tracker</h1>
-<p>Build Discipline. Stay Consistent. Transform Your Life.</p>
+<p>Build Discipline. Stay Consistent.</p>
 <div class="price">Only ₹49</div>
 
 <button class="btn" onclick="payNow()">Pay with UPI</button>
-<button class="btn" onclick="shareWhatsApp()">Share on WhatsApp</button>
+<button class="btn" onclick="shareLink()">Share on WhatsApp</button>
+
 </div>
 
 <div class="section">
@@ -123,37 +85,29 @@ opacity:0.9;
 <p>✔ 30 Day Tracking Sheet</p>
 <p>✔ Printable & Digital Version</p>
 <p>✔ Clean Minimal Design</p>
-<p>✔ Helps You Stay Consistent</p>
+<p>✔ Easy to Use</p>
 </div>
 
 <div class="card">
 <h2>👀 Preview</h2>
-<p>See how clean and simple it looks:</p>
 <img src="PASTE_YOUR_IMAGE_LINK_HERE" class="preview-img">
 </div>
 
 <div class="card">
 <h2>📸 After Payment</h2>
-<p>1️⃣ Complete UPI Payment</p>
-<p>2️⃣ Take Screenshot</p>
-<p>3️⃣ Upload Below OR Send via WhatsApp</p>
+<p>After paying ₹49:</p>
+<p>1️⃣ Take screenshot</p>
+<p>2️⃣ Click button below</p>
+<p>3️⃣ Send screenshot on WhatsApp</p>
 
-<form action="https://formsubmit.co/moominmuneer804@gmail.com" method="POST" enctype="multipart/form-data">
-<input type="email" name="email" placeholder="Enter your email" required>
-<input type="file" name="screenshot" required>
-<input type="hidden" name="_subject" value="New Habit Tracker Payment">
-<button class="upload-btn" type="submit">Submit Screenshot</button>
-</form>
-
-<br>
-<button class="btn" onclick="sendWhatsApp()">Send Screenshot on WhatsApp</button>
+<button class="btn" onclick="sendScreenshot()">Send Screenshot on WhatsApp</button>
 
 </div>
 
 </div>
 
 <div class="footer">
-Secure UPI Payment | Instant Manual Verification | © 2026 Moomin
+Secure UPI Payment | © 2026 Moomin
 </div>
 
 <script>
@@ -161,13 +115,13 @@ function payNow(){
 window.location.href="upi://pay?pa=moominmuneer804@okicici&pn=Moomin&am=49&cu=INR";
 }
 
-function shareWhatsApp(){
-var text="🔥 I found this amazing 30 Day Habit Tracker for just ₹49! Check it out:";
+function shareLink(){
+var text="🔥 Check out this 30 Day Habit Tracker for just ₹49! Improve your discipline today.";
 window.open("https://wa.me/?text="+encodeURIComponent(text));
 }
 
-function sendWhatsApp(){
-var text="Hi, I have completed the payment for Habit Tracker. Sharing screenshot here.";
+function sendScreenshot(){
+var text="Hi, I have completed the payment for the Habit Tracker. Sharing my screenshot here.";
 window.open("https://wa.me/919906778854?text="+encodeURIComponent(text));
 }
 </script>

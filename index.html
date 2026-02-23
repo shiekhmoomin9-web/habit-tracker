@@ -8,33 +8,13 @@
 body{
 margin:0;
 font-family:'Segoe UI',sans-serif;
+background:#0f0f0f;
 color:white;
 text-align:center;
 overflow-x:hidden;
-
-/* Premium Background */
-background:
-linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-url("https://images.unsplash.com/photo-1517433456452-f9633a875f6f");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
 }
 
-/* Soft Golden Glow */
-body::before{
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:radial-gradient(circle at center, rgba(255,215,0,0.08), transparent 70%);
-pointer-events:none;
-}
-
-/* Fade Animation */
+/* Smooth Fade */
 .fade{
 opacity:0;
 transform:translateY(40px);
@@ -48,9 +28,10 @@ transform:translateY(0);
 }
 }
 
-/* Hero Section */
+/* Hero */
 .hero{
 padding:90px 20px;
+background:linear-gradient(180deg,#000,#111);
 }
 
 h1{
@@ -96,17 +77,15 @@ transform:translateY(-5px);
 box-shadow:0 0 30px #FFD700;
 }
 
-/* Section */
+/* Sections */
 .section{
 max-width:700px;
 margin:60px auto;
 padding:20px;
 }
 
-/* Card */
 .card{
-background:rgba(20,20,20,0.85);
-backdrop-filter:blur(6px);
+background:#1a1a1a;
 padding:35px;
 border-radius:20px;
 box-shadow:0 10px 40px rgba(255,215,0,0.1);

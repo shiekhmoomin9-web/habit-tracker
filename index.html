@@ -181,3 +181,11 @@ if(time < 0){ time = 600; }
 
 </body>
 </html>
+<script>
+const names = ["Aman from Delhi", "Sara from Mumbai", "Rahul from Bangalore", "Ali from Hyderabad"];
+
+setInterval(function(){
+let randomName = names[Math.floor(Math.random()*names.length)];
+alert("🔥 " + randomName + " just purchased the Habit Tracker!");
+},15000);
+</script>

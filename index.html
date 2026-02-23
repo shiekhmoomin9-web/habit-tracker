@@ -8,45 +8,88 @@
 body{
 margin:0;
 font-family: Arial, sans-serif;
-background:#f4f6fb;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-}
-
-.card{
-background:white;
-width:350px;
-padding:30px;
-border-radius:15px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
+background: linear-gradient(135deg,#667eea,#764ba2);
+color:white;
 text-align:center;
 }
 
-h1{
-margin-bottom:10px;
+.container{
+max-width:480px;
+margin:30px auto;
+background:white;
+color:black;
+padding:30px;
+border-radius:20px;
+box-shadow:0 20px 60px rgba(0,0,0,0.3);
+animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1; transform:translateY(0);}
 }
 
 .price{
-font-size:22px;
+font-size:26px;
 font-weight:bold;
-margin:15px 0;
+color:#764ba2;
+margin:10px 0;
+}
+
+.timer{
+color:red;
+font-weight:bold;
+margin:10px 0;
+}
+
+.sold{
+color:green;
+font-weight:bold;
+margin:5px 0 15px 0;
+}
+
+.features{
+text-align:left;
+margin:20px 0;
+}
+
+.features li{
+margin:8px 0;
+}
+
+.preview img{
+width:100%;
+border-radius:10px;
+margin-top:10px;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+transition:0.3s;
+}
+
+.preview img:hover{
+transform:scale(1.05);
 }
 
 button{
 width:100%;
-padding:12px;
+padding:14px;
 margin-top:12px;
 border:none;
-border-radius:8px;
+border-radius:10px;
 font-size:16px;
 cursor:pointer;
+transition:0.3s;
 }
 
 .pay-btn{
 background:#ff4d6d;
 color:white;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(255,77,109,0.7);}
+70%{box-shadow:0 0 0 15px rgba(255,77,109,0);}
+100%{box-shadow:0 0 0 0 rgba(255,77,109,0);}
 }
 
 .pay-btn:hover{
@@ -62,22 +105,48 @@ color:white;
 background:#1ebe5d;
 }
 
+.review{
+background:#f4f4f4;
+padding:10px;
+border-radius:8px;
+margin-top:10px;
+font-size:14px;
+}
+
 .note{
 margin-top:15px;
 font-size:14px;
 color:green;
+font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
 <h1>Ultimate Habit Tracker</h1>
-<p>Build discipline. Track daily habits easily.</p>
+<p>Build discipline. Stay consistent. Transform your life.</p>
 
-<div class="price">Price: ₹49</div>
+<div class="price">Only ₹49</div>
+
+<div class="timer">Offer ends in: <span id="countdown">10:00</span></div>
+<div class="sold">🔥 127 people purchased today</div>
+
+<ul class="features">
+<li>✔ Daily habit tracking system</li>
+<li>✔ Weekly & Monthly progress sheet</li>
+<li>✔ Printable clean PDF design</li>
+<li>✔ Boost productivity & focus</li>
+<li>✔ Perfect for students & self-growth</li>
+</ul>
+
+<h3>Preview</h3>
+<div class="preview">
+<img src="https://via.placeholder.com/400x250?text=Preview+1">
+<img src="https://via.placeholder.com/400x250?text=Preview+2">
+</div>
 
 <a href="upi://pay?pa=moominmuneer804@okicici&pn=ShiekhMoomin&am=49&cu=INR">
 <button class="pay-btn">Pay ₹49 via Google Pay / UPI</button>
@@ -87,11 +156,28 @@ color:green;
 <button class="whatsapp-btn">Send Payment Screenshot</button>
 </a>
 
+<div class="review">⭐ “This tracker improved my consistency in 7 days!”</div>
+<div class="review">⭐ “Simple, clean and very effective.”</div>
+
 <div class="note">
 Instant delivery after payment confirmation.
 </div>
 
 </div>
+
+<script>
+// Countdown Timer
+let time = 600;
+let countdown = document.getElementById("countdown");
+
+setInterval(function(){
+let minutes = Math.floor(time/60);
+let seconds = time % 60;
+countdown.innerHTML = minutes + ":" + (seconds<10?"0":"") + seconds;
+time--;
+if(time < 0){ time = 600; }
+},1000);
+</script>
 
 </body>
 </html>

@@ -1,81 +1,142 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Habit Tracker Payment</title>
+<title>30 Day Habit Tracker</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body{
-font-family: Arial;
 margin:0;
-background: linear-gradient(135deg,#1e3c72,#2a5298);
+font-family:'Segoe UI',sans-serif;
+background: linear-gradient(-45deg,#4CAF50,#2E7D32,#1e3c72,#2a5298);
+background-size:400% 400%;
+animation: gradientBG 10s ease infinite;
 color:white;
 text-align:center;
 }
 
-.container{
-padding:40px 20px;
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.hero{
+padding:70px 20px;
+animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+h1{
+font-size:36px;
+margin-bottom:10px;
+}
+
+.price{
+font-size:30px;
+font-weight:bold;
+margin:20px 0;
+}
+
+.btn{
+background:white;
+color:#2E7D32;
+padding:15px 35px;
+border-radius:50px;
+border:none;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+box-shadow:0 0 15px rgba(255,255,255,0.5);
+}
+
+.btn:hover{
+transform:scale(1.07);
+box-shadow:0 0 25px rgba(255,255,255,0.8);
 }
 
 .section{
-background:white;
-color:#333;
-margin:20px;
+max-width:600px;
+margin:40px auto;
 padding:20px;
-border-radius:12px;
 }
 
-button{
-background:#2a5298;
-color:white;
-border:none;
-padding:12px 25px;
-font-size:16px;
-border-radius:8px;
-cursor:pointer;
-margin-top:15px;
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(12px);
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+margin-bottom:25px;
+animation: fadeIn 1.5s ease-in;
 }
 
 input{
-width:90%;
-padding:10px;
-margin:10px 0;
-border-radius:6px;
-border:1px solid #ccc;
+width:100%;
+padding:12px;
+margin:12px 0;
+border-radius:10px;
+border:none;
+}
+
+.upload-btn{
+background:white;
+color:#2E7D32;
+padding:12px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
 }
 
 .footer{
-margin:25px;
+margin:40px;
 font-size:14px;
-opacity:0.8;
+opacity:0.9;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="hero">
 <h1>🔥 30 Day Habit Tracker</h1>
-<p>Price: ₹49</p>
-
-<button onclick="payNow()">Pay via Google Pay</button>
+<p>Build Discipline. Stay Consistent. Transform Your Life.</p>
+<div class="price">Only ₹49</div>
+<button class="btn" onclick="payNow()">Pay with UPI</button>
 </div>
 
 <div class="section">
-<h2>📸 After Payment</h2>
-<p>1️⃣ Take screenshot of successful payment.</p>
-<p>2️⃣ Upload screenshot below.</p>
-<p>3️⃣ Enter your Email.</p>
 
-<form action="https://formsubmit.co/YOUR_EMAIL_HERE" method="POST" enctype="multipart/form-data">
+<div class="card">
+<h2>📋 What You Get</h2>
+<p>✔ 30 Day Tracking Sheet</p>
+<p>✔ Printable & Digital Version</p>
+<p>✔ Minimal Clean Design</p>
+<p>✔ Boost Daily Consistency</p>
+</div>
+
+<div class="card">
+<h2>📸 Upload Payment Screenshot</h2>
+<p>After payment, upload screenshot below.</p>
+
+<form action="https://formsubmit.co/moominmuneer804@gmail.com" method="POST" enctype="multipart/form-data">
 <input type="email" name="email" placeholder="Enter your email" required>
 <input type="file" name="screenshot" required>
 <input type="hidden" name="_subject" value="New Habit Tracker Payment">
-<button type="submit">Submit Screenshot</button>
+<button class="upload-btn" type="submit">Submit & Get Access</button>
 </form>
+
+</div>
+
 </div>
 
 <div class="footer">
-You will receive download link after verification.
+Secure UPI Payment | © 2026 Moomin
 </div>
 
 <script>
@@ -85,4 +146,4 @@ window.location.href="upi://pay?pa=moominmuneer804@okicici&pn=Moomin&am=49&cu=IN
 </script>
 
 </body>
-</html>
+</html>v

@@ -36,6 +36,11 @@ border:none;
 font-size:16px;
 cursor:pointer;
 margin:8px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 .section{
@@ -95,10 +100,9 @@ color:#666;
 
 <div class="card">
 <h2>📸 After Payment</h2>
-<p>After paying ₹49:</p>
-<p>1️⃣ Take screenshot</p>
-<p>2️⃣ Click button below</p>
-<p>3️⃣ Send screenshot on WhatsApp</p>
+<p>1️⃣ Complete UPI Payment</p>
+<p>2️⃣ Take Screenshot</p>
+<p>3️⃣ Click button below and send screenshot</p>
 
 <button class="btn" onclick="sendScreenshot()">Send Screenshot on WhatsApp</button>
 
@@ -107,7 +111,7 @@ color:#666;
 </div>
 
 <div class="footer">
-Secure UPI Payment | © 2026 Moomin
+Secure UPI Payment | Instant Manual Verification | © 2026 Moomin
 </div>
 
 <script>
@@ -128,3 +132,4 @@ window.open("https://wa.me/919906778854?text="+encodeURIComponent(text));
 
 </body>
 </html>
+

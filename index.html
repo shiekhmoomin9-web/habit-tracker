@@ -41,10 +41,16 @@ margin-bottom:10px;
 }
 
 .price{
-font-size:30px;
+font-size:32px;
 font-weight:bold;
 color:#FFD700;
 margin:20px 0;
+}
+
+.old-price{
+text-decoration:line-through;
+color:#aaa;
+font-size:18px;
 }
 
 /* Timer */
@@ -74,7 +80,7 @@ box-shadow:0 0 20px #FFD700;
 
 .btn:hover{
 transform:translateY(-5px);
-box-shadow:0 0 30px #FFD700;
+box-shadow:0 0 35px #FFD700;
 }
 
 /* Sections */
@@ -103,17 +109,33 @@ color:#FFD700;
 margin-bottom:15px;
 }
 
-/* Preview Image */
+/* Preview */
+.preview-container{
+position:relative;
+display:inline-block;
+}
+
 .preview-img{
 width:100%;
 border-radius:15px;
 margin-top:20px;
 transition:0.4s;
-cursor:pointer;
 }
 
 .preview-img:hover{
-transform:scale(1.08);
+transform:scale(1.05);
+}
+
+.watermark{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:45px;
+color:rgba(255,215,0,0.35);
+font-weight:bold;
+pointer-events:none;
+letter-spacing:5px;
 }
 
 /* Footer */
@@ -130,9 +152,13 @@ color:#aaa;
 <div class="hero fade">
 <h1>🔥 30 Day Habit Tracker</h1>
 <p style="color:#ccc;">Build Discipline. Stay Consistent. Transform Your Life.</p>
+
+<div class="old-price">₹199</div>
 <div class="price">Special Launch Price ₹49</div>
+
 <div class="timer">Offer Ends In: <span id="countdown"></span></div>
 <br>
+
 <button class="btn" onclick="payNow()">Pay with UPI</button>
 <button class="btn" onclick="shareLink()">Share on WhatsApp</button>
 </div>
@@ -149,13 +175,17 @@ color:#aaa;
 </div>
 
 <div class="card">
-<h2>👀 Live Preview</h2>
+<h2>👀 Preview Before Payment</h2>
 
+<div class="preview-container">
 <img src="tracker-preview.jpg" class="preview-img" alt="Habit Tracker Preview">
+<div class="watermark">SAMPLE</div>
+</div>
 
-<p style="color:#aaa; font-size:14px; margin-top:10px;">
-*This is the actual tracker design you will receive after payment.*
+<p style="color:#aaa; font-size:14px; margin-top:15px;">
+This is a preview version. Full HD printable PDF will be delivered after payment confirmation.
 </p>
+
 </div>
 
 <div class="card">
